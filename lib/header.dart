@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ventana_1/Backweather.dart';
-import 'Prueba.dart';
+import 'package:ventana_1/routes.dart';
 import 'button.dart';
 
 class Header extends StatelessWidget {
@@ -20,7 +20,10 @@ class Header extends StatelessWidget {
               children: <Widget>[
                 // ignore: prefer_const_literals_to_create_immutables
                 Row(children: <Widget>[
-                  const Icon(Icons.home, color: Colors.blueGrey),
+                  IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.home),
+                      color: Colors.blueGrey),
                 ]),
                 const SizedBox(
                   //Separo los widgest

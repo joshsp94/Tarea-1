@@ -285,7 +285,7 @@ class ScrollScreen extends StatelessWidget {
                       )
                     ],
                   )),
-              Container(
+              SizedBox(
                 height: 100,
                 child: Column(
                   children: [
@@ -330,7 +330,9 @@ class ScrollScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, 'SecondPage');
+        },
       ),
     );
   }
