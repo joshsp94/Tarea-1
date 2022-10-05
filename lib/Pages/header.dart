@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ventana_1/Backweather.dart';
+import 'package:ventana_1/widget/Backweather.dart';
 import 'package:ventana_1/routes.dart';
-import 'button.dart';
+import '../widget/button.dart';
 
 class Header extends StatelessWidget {
   @override

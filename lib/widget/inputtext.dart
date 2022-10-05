@@ -8,7 +8,7 @@ class InputText extends StatelessWidget {
   final TextInputType KeyBoard;
   final bool obsecure;
   final void Function(String data) onChanged;
-  //final String Function(String data) validator;
+  final String Function(String data) validator;
 
   const InputText({
     super.key,
@@ -18,7 +18,7 @@ class InputText extends StatelessWidget {
     this.KeyBoard = TextInputType.text,
     this.obsecure = false,
     required this.onChanged,
-    //required this.validator
+    required this.validator,
   });
 
   @override

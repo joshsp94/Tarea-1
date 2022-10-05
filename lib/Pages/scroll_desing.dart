@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ventana_1/button.dart';
-import 'Backweather.dart';
+import 'package:ventana_1/widget/button.dart';
+import '../widget/Backweather.dart';
 
 class ScrollScreen extends StatelessWidget {
   @override

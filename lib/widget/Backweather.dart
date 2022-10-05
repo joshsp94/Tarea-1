@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ventana_1/scroll_desing.dart';
+import 'package:ventana_1/Pages/scroll_desing.dart';
 
 class BackWheater extends StatelessWidget {
   @override
@@ -14,7 +14,7 @@ class BackWheater extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               height: 350.0,
               color: Colors.black54,
-              //child: ScrollScreen(),
+              child: ScrollScreen(),
             ))
       ],
     );

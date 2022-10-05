@@ -1,6 +1,6 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
-import 'Backweather.dart';
+import 'widget/Backweather.dart';
 
 class Pruebas extends StatelessWidget {
   @override
