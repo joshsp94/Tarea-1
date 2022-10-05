@@ -8,6 +8,7 @@ class InputText extends StatelessWidget {
   final TextInputType KeyBoard;
   final bool obsecure;
   final void Function(String data) onChanged;
+  //final String Function(String data) validator;
 
   const InputText({
     super.key,
@@ -17,24 +18,26 @@ class InputText extends StatelessWidget {
     this.KeyBoard = TextInputType.text,
     this.obsecure = false,
     required this.onChanged,
+    //required this.validator
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: TextFormField(
-        keyboardType: this.KeyBoard,
-        obscureText: this.obsecure,
-        onChanged: this.onChanged,
+        keyboardType: KeyBoard,
+        obscureText: obsecure,
+        onChanged: onChanged,
+        //validator: validator,
         decoration: InputDecoration(
-            hintText: this.hint,
-            labelText: this.label,
+            hintText: hint,
+            labelText: label,
             labelStyle: const TextStyle(
               color: Colors.blueGrey,
               fontFamily: 'FredokeOne',
               fontSize: 12.0,
             ),
-            suffixIcon: this.icono,
+            suffixIcon: icono,
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(20.0))),
       ),

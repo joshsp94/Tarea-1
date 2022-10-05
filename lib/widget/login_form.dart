@@ -14,7 +14,6 @@ class _LoginFormState extends State<LoginForm> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Form(
         child: Column(
       children: <Widget>[
@@ -25,6 +24,12 @@ class _LoginFormState extends State<LoginForm> {
           onChanged: (data) {
             email = data;
           },
+          //validator: (data) {
+          //  if (!data.contains('@')) {
+          //   return "Invalid Email";
+          //  }
+          // return null;
+          //},
           icono: const Icon(Icons.verified_user),
         ),
         Divider(height: 15.0),
@@ -36,11 +41,13 @@ class _LoginFormState extends State<LoginForm> {
           onChanged: (data) {
             password = data;
           },
+          //KeyBoard: null,
+          // validator: (String data) {},
         ),
         Divider(height: 15.0),
         TextButton(
             onPressed: () {
-              // Navigator.pushNamed(context, 'Header');
+              Navigator.pushNamed(context, 'SecondPage');
             },
             child: const Text('Confirmar'))
       ],

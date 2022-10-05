@@ -14,7 +14,7 @@ class BackWheater extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               height: 350.0,
               color: Colors.black54,
-              child: ScrollScreen(),
+              //child: ScrollScreen(),
             ))
       ],
     );
