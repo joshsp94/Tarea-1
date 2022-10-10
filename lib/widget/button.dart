@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ventana_1/routes.dart';
 
 class Button extends StatelessWidget {
   Button({super.key, required String this.textButton});
@@ -8,8 +7,6 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    routes:
-    routes;
     return InkWell(
       onTap: () {
         Navigator.pushNamed(context, 'SecondPage');

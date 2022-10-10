@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'Pages/header.dart';
-import 'Pages/login.dart';
+import '../pages/header.dart';
+import '../pages/login.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
-  'SecondPage': (context) => Header(),
+  'Home': (context) => Header(),
   'LoginPage': (context) => const LogingPage(),
 };

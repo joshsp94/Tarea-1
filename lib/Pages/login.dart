@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ventana_1/Pages/header.dart';
-import 'package:ventana_1/routes.dart';
+import 'package:ventana_1/routes/routes.dart';
 import 'package:ventana_1/widget/login_form.dart';
 
 void main() => runApp(const LogingPage());
@@ -24,7 +23,15 @@ class LogingPage extends StatelessWidget {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [LoginForm()],
+          children: const <Widget>[
+            Image(
+              width: 200,
+              height: 200,
+              image: AssetImage('images/Logo.png'),
+            ),
+            Divider(height: 25.0),
+            LoginForm()
+          ],
         )),
       ),
     );

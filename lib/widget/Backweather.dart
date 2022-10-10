@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ventana_1/Pages/scroll_desing.dart';
+import 'package:ventana_1/componets/horizontal_scroll.dart';
+import 'package:ventana_1/componets/scroll_desing.dart';
+
+import 'cards.dart';
 
 class BackWheater extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //TODO: implement build
     return Stack(
       children: <Widget>[
         GradientBack(),
@@ -12,10 +14,10 @@ class BackWheater extends StatelessWidget {
             bottom: 0.0,
             child: Container(
               width: MediaQuery.of(context).size.width,
-              height: 350.0,
+              height: 325.0,
               color: Colors.black54,
-              child: ScrollScreen(),
-            ))
+              child: const ScrollScreen(),
+            )),
       ],
     );
   }

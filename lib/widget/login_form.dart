@@ -20,6 +20,7 @@ class _LoginFormState extends State<LoginForm> {
     return Form(
         child: Column(
       children: <Widget>[
+        // Divider(height: 25.0),
         InputText(
           label: 'Email Address',
           hint: 'Email Address',
@@ -67,6 +68,7 @@ class _LoginFormState extends State<LoginForm> {
               color: Color.fromARGB(255, 2, 15, 36)),
           child: TextButton(
             onPressed: () {
+              //Navigator.of(context).pushNamed('SecondPage');
               LoginUser(context);
             },
             child: Row(
@@ -113,6 +115,6 @@ class _LoginFormState extends State<LoginForm> {
   }
 
   void ShowRegister(BuildContext context) {
-    Navigator.of(context).pushNamed('SecondPage');
+    Navigator.of(context).pushNamed('RegisterPage');
   }
 }
