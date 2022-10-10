@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ventana_1/widget/button.dart';
-import '../widget/cards.dart';
+import '../widget/buttonstyle.dart';
 
 class Horizontal_Scroll extends StatelessWidget {
   const Horizontal_Scroll({super.key});
@@ -8,27 +7,21 @@ class Horizontal_Scroll extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 0, 14, 24),
+      backgroundColor: Colors.transparent,
       body: Stack(
         children: [
           //GradientBack(),
           ListView(
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              Button(textButton: 'textButton'),
-              Button(textButton: 'textButton'),
-              Button(textButton: 'textButton'),
-              Button(textButton: 'textButton'),
-              Button(textButton: 'textButton'),
+              ButtonStily(textButton: 'Overview'),
+              ButtonStily(textButton: 'Tee Times'),
+              ButtonStily(textButton: 'Players'),
+              ButtonStily(textButton: 'Notes'),
+              ButtonStily(textButton: 'Feed'),
             ],
           )
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {
-          Navigator.pushNamed(context, 'LoginPage');
-        },
       ),
     );
   }

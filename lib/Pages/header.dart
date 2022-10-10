@@ -77,9 +77,21 @@ class Header extends StatelessWidget {
                         'Augusta Georgia'),
                   ],
                 ),
-                //Container(
-                //  child: Horizontal_Scroll(),
-                //)
+                const SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      alignment: Alignment.topLeft,
+                      padding: const EdgeInsets.all(1),
+                      width: 350.0,
+                      height: 50.0,
+                      color: Colors.transparent,
+                      child: const Horizontal_Scroll(),
+                    )
+                  ],
+                )
               ],
             ),
           )

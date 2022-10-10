@@ -26,7 +26,6 @@ class BackWheater extends StatelessWidget {
 class GradientBack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //TODO: implement build
     return Container(
       decoration: const BoxDecoration(
           gradient: LinearGradient(colors: [
