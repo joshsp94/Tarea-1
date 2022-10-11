@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ventana_1/widget/button.dart';
 
 class Cards extends StatelessWidget {
@@ -71,7 +72,15 @@ class Cards extends StatelessWidget {
                   height: 5,
                   width: 10,
                 ),
-                Button(textButton: "Finish")
+                Button(
+                  textButton: "Coment",
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'BlogPage');
+                  },
+                  backgroundColor: Colors.blue.shade800,
+                  borderColor: Colors.blue.shade800,
+                  txtColor: Colors.white,
+                ),
               ],
             ),
             const Divider(

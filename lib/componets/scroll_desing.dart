@@ -7,7 +7,7 @@ class ScrollScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 0, 14, 24),
+      backgroundColor: const Color.fromARGB(255, 0, 14, 24),
       body: Stack(
         children: [
           //GradientBack(),
@@ -30,7 +30,7 @@ class ScrollScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
-          Navigator.pushNamed(context, 'LoginPage');
+          Navigator.pushNamed(context, 'BlogPage');
         },
       ),
     );

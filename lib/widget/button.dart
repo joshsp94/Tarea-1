@@ -1,29 +1,43 @@
 import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
-  Button({super.key, required String this.textButton});
+  Button({
+    super.key,
+    required String this.textButton,
+    required this.onPressed,
+    required this.backgroundColor,
+    required this.borderColor,
+    required this.txtColor,
+  });
 
   String textButton = "";
+  VoidCallback onPressed;
+  final Color backgroundColor;
+  final Color borderColor;
+  final Color txtColor;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        Navigator.pushNamed(context, 'SecondPage');
-      },
-      //funcion que crea un boton
-      child: Container(
-        margin: EdgeInsets.only(top: 5.0, left: 5.0, right: 5.0),
-        height: 25.0,
-        width: 125.0,
-        decoration: BoxDecoration(boxShadow: [
-          BoxShadow(
-              color: const Color.fromARGB(255, 4, 0, 19),
-              offset: new Offset(5.0, 5.0),
-              blurRadius: 10.0)
-        ], borderRadius: BorderRadius.circular(30.0), color: Colors.green[400]),
-        child: Center(child: Text(textButton)),
-      ),
-    );
+        child: Container(
+      padding: const EdgeInsets.all(10),
+      child: TextButton(
+          onPressed: onPressed,
+          child: Text(
+            textButton,
+            style: TextStyle(fontSize: 16),
+          ),
+          style: ButtonStyle(
+              padding:
+                  MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(12)),
+              foregroundColor: MaterialStateProperty.all<Color>(txtColor),
+              backgroundColor:
+                  MaterialStateColor.resolveWith((Color) => backgroundColor),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0),
+                side: BorderSide(color: borderColor),
+              )))),
+    ));
   }
 }

@@ -22,6 +22,8 @@ version: 1.0.0+1
 environment:
   sdk: '>=2.18.0 <3.0.0'
 
+
+
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
@@ -45,6 +47,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  auto_size_text: ^3.0.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -65,7 +68,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/image/
+    - image/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

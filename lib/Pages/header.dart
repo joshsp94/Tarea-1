@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:ventana_1/routes/routes.dart';
 import 'package:ventana_1/widget/Backweather.dart';
 import '../widget/button.dart';
-import 'package:ventana_1/componets/horizontal_scroll.dart';
+// ignore: depend_on_referenced_packages
+import 'package:auto_size_text/auto_size_text.dart';
 
 class Header extends StatelessWidget {
+  const Header({super.key});
+
   @override
-  Widget build(Object context) {
+  Widget build(BuildContext context) {
+    routes;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -39,16 +44,25 @@ class Header extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          const Text(
+                          const AutoSizeText(
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
+                              maxLines: 1,
                               'Woskuman Invitational'),
                           const Divider(height: 5.0),
                           const Text(
                               style: TextStyle(color: Colors.grey),
                               'Private - sep 2-3, 2022'),
                           const Divider(height: 5.0),
-                          Button(textButton: "Edit Event")
+                          Button(
+                            textButton: "Edit Event",
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'LoginPage');
+                            },
+                            backgroundColor: Colors.transparent,
+                            borderColor: Colors.green.shade300,
+                            txtColor: Colors.green.shade300,
+                          )
                         ],
                       ),
                     )
@@ -80,18 +94,58 @@ class Header extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                Row(
-                  children: [
-                    Container(
-                      alignment: Alignment.topLeft,
-                      padding: const EdgeInsets.all(1),
-                      width: 350.0,
-                      height: 50.0,
-                      color: Colors.transparent,
-                      child: const Horizontal_Scroll(),
-                    )
-                  ],
-                )
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Button(
+                        textButton: 'Overview',
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'OverViewPage');
+                        },
+                        backgroundColor: Colors.transparent,
+                        borderColor: Colors.grey,
+                        txtColor: Colors.grey,
+                      ),
+                      Button(
+                        textButton: 'Tee Time',
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'TeeTPage');
+                        },
+                        backgroundColor: Colors.transparent,
+                        borderColor: Colors.grey,
+                        txtColor: Colors.grey,
+                      ),
+                      Button(
+                        textButton: 'Players',
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'PlayerPage');
+                        },
+                        backgroundColor: Colors.transparent,
+                        borderColor: Colors.grey,
+                        txtColor: Colors.grey,
+                      ),
+                      Button(
+                        textButton: 'Note',
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'Note_Page');
+                        },
+                        backgroundColor: Colors.transparent,
+                        borderColor: Colors.grey,
+                        txtColor: Colors.grey,
+                      ),
+                      Button(
+                        textButton: 'Fedd',
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'FeddPage');
+                        },
+                        backgroundColor: Colors.transparent,
+                        borderColor: Colors.grey,
+                        txtColor: Colors.grey,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           )
